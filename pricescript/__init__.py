@@ -8,16 +8,14 @@ from selenium.common.exceptions import NoSuchElementException, ElementNotVisible
 
 import csv
 
-print 'hi'
-
 driver = webdriver.Chrome(executable_path=r"../chromedriver")
 driver.get("https://www.google.com/shopping?hl=en")
 
 lastprice = 10
 
 driver.implicitly_wait(3)
-with open('../goodNutrition4.csv', 'r+') as csvfile:
-    with open('../goodNutrition44.csv', 'w+') as csvOutput:
+with open('../goodGoodNutrition1.csv', 'r+') as csvfile:
+    with open('../goodPrice1.csv', 'w+') as csvOutput:
         reader = csv.reader(csvfile, delimiter='\t')
         csvWriter = csv.writer(csvOutput, delimiter='\t')
         all = []

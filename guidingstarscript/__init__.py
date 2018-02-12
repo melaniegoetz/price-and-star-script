@@ -1,7 +1,7 @@
 import csv
 
-with open('../goodImages1.csv', 'r+') as csvfile:
-    with open('../goodImages11.csv', 'w') as csvOutput:
+with open('../goodImages4.csv', 'r+') as csvfile:
+    with open('../guidingStars4.csv', 'w') as csvOutput:
         reader = csv.reader(csvfile, delimiter='\t')
         csvWriter = csv.writer(csvOutput, delimiter='\t')
         all = []
@@ -132,7 +132,7 @@ with open('../goodImages1.csv', 'r+') as csvfile:
             guidingStars = 0
 
             # correction for inaccurate "added sugar", "added sodium", "o-3 fatty", "epa/dha"
-            starpoints = starpoints + 5
+            starpoints = starpoints + 3
 
             if starpoints < 0:
                 guidingStars = 0
